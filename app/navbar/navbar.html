@@ -1,0 +1,15 @@
+<md-toolbar ng-if="vm.AuthService.isLogged()">
+	<div layout="row" layout-padding layout-align="space-between center" class="header">
+		<div style="text-align: center;">
+			<div><img src="app/img/logo.png" style="width: 50px;"></div>
+		</div>
+	    <md-button data-restrict access='ROLE_ADMIN' ng-link="['/Users']">
+	      	{{'USER.USERS' | translate}}
+	    </md-button>
+		<div class="flex"></div>
+	    <md-button ng-link="['/Login']">
+	      	<md-icon class="material-icons">exit_to_app</md-icon>
+	    </md-button>
+	</div>
+	<hr class="header-bottom">
+</md-toolbar>

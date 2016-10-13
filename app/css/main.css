@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Helvetica;
+  background: #eee;
+  -webkit-font-smoothing: antialiased; }
+
+hgroup {
+  text-align: center;
+  margin-top: 4em; }
+
+h1, h3 {
+  font-weight: 300; }
+
+h1 {
+  color: #636363; }
+
+h3 {
+  color: #4a89dc; }
+
+/* Label */
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: bold; }
+
+.md-sidenav-left {
+  border-right: 1px solid rgba(0, 0, 0, 0.12); }
+
+.md-table-pagination .label {
+  color: rgba(0, 0, 0, 0.54); }
+
+.md-toolbar-tools md-icon {
+  color: rgba(255, 255, 255, 0.87) !important; }
+
+md-toolbar.md-table-toolbar.md-default-theme:not(.md-menu-toolbar).md-default .md-button,
+md-toolbar.md-table-toolbar:not(.md-menu-toolbar).md-default .md-button {
+  color: rgba(255, 255, 255, 0.87) !important; }
+
+table.md-table th.md-column {
+  font-size: 15px !important; }
+
+table.md-table td.md-cell {
+  font-size: 13px; }
+
+.processing > td {
+  color: #ccc !important;
+  font-style: italic; }
+
+.table-state-history {
+  width: 100%; }
+  .table-state-history th {
+    padding: 10px;
+    color: #999;
+    text-align: center;
+    border-bottom: 1px solid #eee; }
+  .table-state-history td {
+    padding: 10px;
+    font-size: 17px;
+    text-align: center; }
+  .table-state-history tr {
+    border-bottom: 1px solid #eee; }
+
+.error {
+  color: #FF0000; }
+
+.user form, .loginForm form {
+  width: 380px;
+  margin: 4em auto;
+  padding: 30px !important; }
+
+.detail .title {
+  padding-bottom: 10px; }
+
+.detail .user-image {
+  width: 50px;
+  border-radius: 10px;
+  padding: 0px; }
+
+.detail .field {
+  padding: 8px; }
+  .detail .field label {
+    font-size: 15px;
+    margin-bottom: 0px;
+    margin-right: 5px; }
+    .detail .field label .material-icons {
+      font-size: 20px;
+      color: #999; }
+  .detail .field span {
+    font-size: 15px;
+    padding: 0px 6px;
+    border-bottom: 1px dotted #ccc; }
+
+.detail .text-big {
+  font-size: 30px; }
+
+.detail .principal-document {
+  line-height: 12rem !important;
+  width: 12rem !important;
+  height: 12rem !important; }
+  .detail .principal-document md-icon {
+    font-size: 70px;
+    height: 70px !important;
+    width: 70px !important; }
+
+.detail .intervener {
+  border-bottom: 1px dotted #ccc;
+  margin: 10px; }
+  .detail .intervener md-icon {
+    color: #CCC;
+    margin-right: 10px; }
+  .detail .intervener span {
+    font-size: 15px; }
+
+.detail .more-info {
+  color: #CCC; }
+
+.detail .box {
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  margin: 10px;
+  -webkit-box-shadow: 7px 7px 20px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 20px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 20px -12px rgba(0, 0, 0, 0.75); }
+  .detail .box .box-title {
+    background-color: white;
+    border-radius: 20px;
+    padding: 2px 15px;
+    margin-bottom: 20px; }
+    .detail .box .box-title label, .detail .box .box-title md-icon {
+      color: white !important; }
+  .detail .box .agent {
+    background-color: #0062b1 !important; }
+  .detail .box .product {
+    background-color: #005498 !important; }
+  .detail .box .interveners {
+    background-color: #00467e !important; }
+
+.detail .map-link {
+  margin-top: -2px; }
+  .detail .map-link md-icon {
+    color: #337ab7; }
+
+.detail .no-md-field {
+  padding-bottom: 20px; }
+  .detail .no-md-field label {
+    color: rgba(0, 0, 0, 0.26); }
+  .detail .no-md-field .lf-ng-md-file-input-button span {
+    display: none; }
+
+.intevener-dialog .md-toolbar-tools span {
+  font-size: 12px; }
+
+.intevener-dialog .md-toolbar-tools md-checkbox {
+  margin-top: 16px; }
+
+.intevener-dialog .validation {
+  font-size: 12px;
+  padding-left: 20px; }
+  .intevener-dialog .validation span {
+    color: #aaa !important; }
+  .intevener-dialog .validation md-icon {
+    font-size: 12px;
+    width: 12px;
+    height: 12px; }
+
+.intevener-dialog .intervener-img {
+  max-width: 300px;
+  margin-bottom: 20px; }
+
+.list .md-table-toolbar {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 0px; }
+
+.list .md-table-search {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px; }
+
+.list .search {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 12px; }
+  .list .search md-icon {
+    color: white !important;
+    font-size: 16px; }
+  .list .search input {
+    color: #222;
+    border: 0px;
+    padding: 3px;
+    margin-left: 5px;
+    font-weight: 400; }
+  .list .search select {
+    border: 0px;
+    background-color: white;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding: 4px;
+    color: #888;
+    margin-left: 2px; }
+  .list .search .disabled {
+    font-weight: 400;
+    color: #aaa; }
+  .list .search .date {
+    margin: 2px; }
+    .list .search .date md-datepicker {
+      background: none; }
+      .list .search .date md-datepicker .md-datepicker-button {
+        margin: 0px;
+        display: none; }
+      .list .search .date md-datepicker .md-datepicker-input-container {
+        padding-bottom: 0px;
+        border: 0px;
+        background-color: white;
+        margin-left: 0px; }
+        .list .search .date md-datepicker .md-datepicker-input-container .md-datepicker-input {
+          font-size: 12px; }
+
+.list .processes .md-checkbox-column, .list .processes .md-checkbox-cell {
+  display: none; }
+
+.list tr {
+  cursor: pointer; }
+
+.box {
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  margin: 10px;
+  -webkit-box-shadow: 7px 7px 20px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 20px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 20px -12px rgba(0, 0, 0, 0.75); }
+
+md-toast .md-toast-content {
+  height: 100% !important;
+  padding: 30px; }
+
+md-toast .md-toast-data {
+  min-width: 200px; }
+
+md-toast.md-bottom {
+  left: 50%;
+  margin-left: -50px; }
+
+.red {
+  color: #EC4600; }
+
+.green {
+  color: #00A060; }
+
+.orange {
+  color: #ECB200; }
+
+.yellow {
+  color: yellow; }
+
+.image-box {
+  text-align: center; }
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s; }
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0; }
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 50; }
+  .back-button md-icon {
+    font-size: 20px;
+    color: #CCC; }
+  .back-button span {
+    color: #CCC; }
+
+.header-bottom {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0;
+  border-top: 8px solid #ccc; }
+
+.login-page {
+  /*background-image: url(../img/login_background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+  background-color: #025495; }
+  .login-page md-content {
+    background-color: transparent; }
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background: #999; }
+
+table.md-table .md-table-progress th md-progress-linear > .md-container {
+  height: 5px !important; }
+
+table.md-table .md-table-progress th md-progress-linear > .md-container > .md-bar {
+  height: 5px !important; }
+
+trix-editor {
+  background-color: #fdfdfd; }

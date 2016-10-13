@@ -1,0 +1,55 @@
+<div layout="column" class="detail user" ng-cloak>
+
+  <div class="back-button">
+    <md-button type="button" aria-label="Volver" ng-link="['UserList']">
+      <md-icon class="material-icons">arrow_back</md-icon> Volver
+    </md-button>
+  </div>
+
+  <section ng-show="vm.error" layout="row" layout-align="center center" layout-padding class="error">
+    {{vm.error}}
+  </section>
+  
+  <md-content layout="row" layout-padding layout-align="center center" >
+    <form name="userForm" class="box">
+      <md-input-container class="md-block">
+        <label>{{'USER.IDENTIFIER' | translate}}</label>
+        <input ng-disabled="!vm.isAddForm" required md-no-asterisk name="identifier" ng-model="vm.user.identifier">
+        <div ng-messages="userForm.identifier.$error">
+          <div ng-message="required">Este campo es obligatorio.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>{{'USER.PASSWORD' | translate}}</label>
+        <input ng-required="vm.isAddForm" name="newPassword" ng-model="vm.user.newPassword" type="password">
+        <div ng-disabled="!vm.isAddForm" ng-messages="userForm.identifier.$error">
+          <div ng-message="required">Este campo es obligatorio.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>{{'USER.REPEAT_PASSWORD' | translate}}</label>
+        <input name="repeatPassword" type="password">
+      </md-input-container>
+      <md-input-container class="md-block" ng-show="!vm.isAddForm">
+	      <md-checkbox ng-model="vm.user.active" aria-label="Active">
+	            {{'USER.ACTIVE' | translate}}
+	      </md-checkbox>
+      </md-input-container>
+      <fieldset class="standard" ng-hide="vm.isAddForm" >
+          <legend>Roles</legend>
+          <div layout="row" layout-wrap flex>
+            <div ng-repeat="role in vm.roles" class="standard" flex="50">
+                <md-checkbox type="checkbox" ng-checked="vm.existRole(role)" aria-label="{{ 'ROLE.' + role.name | translate }}"
+                       ng-click="vm.toggleRole(role)"/>
+                {{ 'ROLE.' + role.name | translate }}
+              </md-checkbox>
+            </div>
+          </div>
+        </fieldset>
+      <section layout="row" layout-align="center center" layout-padding>
+      	<md-button ng-hide="vm.isProcessing" class="md-raised md-primary" ng-click="vm.save()">{{'GENERAL.SAVE' | translate}}</md-button>
+        <md-progress-circular ng-hide="!vm.isProcessing" md-mode="indeterminate"></md-progress-circular>
+      </section>
+    </form>
+  </md-content>
+</div>

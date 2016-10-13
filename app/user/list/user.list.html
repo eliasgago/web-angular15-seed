@@ -1,0 +1,53 @@
+
+<div class="list">
+
+  <div class="box">
+
+    <md-toolbar class="md-table-toolbar alternate" ng-hide="vm.selected.length || vm.filter.show" aria-hidden="false" style="">
+      <div class="md-toolbar-tools">
+        <h2 class="md-title">{{"USER.USERS" | translate}}</h2>
+        <div flex="" class="flex"></div>
+        <button class="md-icon-button md-button md-ink-ripple" type="button" ng-click="filter.show = true" aria-label="filter_list">
+          <md-icon class="material-icons">filter_list</md-icon>
+        </button>
+        <button class="md-icon-button md-button md-ink-ripple" type="button" aria-label="Nuevo usuario" ng-link="['UserAdd']">
+            <md-icon class="material-icons">add_circle</md-icon>
+        </button>
+      </div>
+    </md-toolbar>
+
+    <section ng-show="vm.error" layout="row" layout-align="center center" layout-padding class="error">
+      {{vm.error}}
+    </section>
+
+    <md-toolbar class="md-table-toolbar alternate" ng-show="vm.selected.length" aria-hidden="false" style="">
+      <div class="md-toolbar-tools">
+        <div>{{vm.selected.length}} elemento seleccionado</div>
+        <div flex="" class="flex"></div>
+        <button class="md-icon-button md-button md-ink-ripple" type="button" ng-click="vm.deleteUsers()" aria-label="delete">
+          <md-icon class="material-icons">delete</md-icon>
+        </button>
+      </div>
+    </md-toolbar>
+    <md-progress-circular ng-hide="!vm.isProcessing" md-mode="indeterminate"></md-progress-circular>
+    <md-table-container ng-hide="vm.isProcessing">
+      <table md-table md-row-select multiple ng-model="vm.selected" md-progress="vm.promise">
+        <thead md-head md-order="vm.query.order" md-on-reorder="vm.getUsersOrdered" md-context="vm" >
+          <tr md-row>
+            <th md-column md-order-by="identifier"><span>Nombre de usuario</span></th>
+            <th md-column md-text><span>Status</span></th>
+          </tr>
+        </thead>
+        <tbody md-body>
+          <tr md-row md-select="user" md-select-id="id" ng-repeat="user in vm.users">
+            <td md-cell><a ng-link="['UserDetail', {id: user.id}]">{{user.identifier}}</a></td>
+            <td md-cell><md-icon ng-show="user.active" class="material-icons">done</md-icon><md-icon ng-show="!user.active" class="material-icons">clear</md-icon></td>
+          </tr>
+        </tbody>
+      </table>
+    </md-table-container>
+
+    <md-table-pagination ng-hide="vm.isProcessing" md-limit="vm.query.limit" md-limit-options="[5, 10, 20]" md-page="vm.query.page" md-total="{{vm.total}}" md-on-paginate="vm.getUsers" md-context="vm" md-page-select md-label="{page: ('GENERAL.TABLE.PAGE' | translate), rowsPerPage: ('GENERAL.TABLE.ROWS_PER_PAGE' | translate), of: ('GENERAL.TABLE.OF' | translate)}"></md-table-pagination>
+
+  </div>
+</div>

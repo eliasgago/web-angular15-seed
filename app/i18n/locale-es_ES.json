@@ -1,0 +1,50 @@
+{
+	"GENERAL": {
+		"TITLE": "ANGULAR SEED",
+		"SAVE": "Guardar",
+		"BACK": "Volver",
+		"CANCEL": "Cancelar",
+		"CONNECTION_ERROR": "Error de comunicación con el servidor",
+		"ERROR_GET": "Se ha producido un error al obtener los datos",
+		"TABLE": {
+			"PAGE": "Página",
+			"ROWS_PER_PAGE": "Filas por página",
+			"OF": "de"
+		},
+		"STATUS":{
+			"CREATED": "Creado",
+			"PENDING": "Pendiente",
+			"ERROR": "Error",
+			"EXPIRED": "Expirado",
+			"REJECTED": "Rechazado",
+			"CANCELED": "Cancelado",
+			"SIGNED": "Firmado"
+		},
+		"CERTIFICATON_TYPES":{
+			"COMMON": "Normal",
+			"ADVANCED": "Avanzada"
+		},
+		"CUSTODY_TYPES":{
+			"LOCAL": "Local",
+			"EXTERNAL": "Externa"
+		},
+		"SI": "Sí",
+		"NO": "No"
+	},
+	"LOGIN":{
+		"LOGOUT": "Cerrar sesión",
+		"ERROR_AUTENTICACION": "El usuario o la contraseña no son correctos"
+	},
+	"USER": {
+		"USERS" : "Usuarios",
+		"IDENTIFIER": "Nombre de usuario",
+		"PASSWORD": "Contraseña",
+		"REPEAT_PASSWORD": "Repite la contraseña",
+		"STATUS": "Status",
+		"ACTIVE": "Activo"
+	},
+	"ROLE": {
+		"ROLE_USER": "Usuario",
+		"ROLE_ADMIN": "Administrador"	
+	}
+}

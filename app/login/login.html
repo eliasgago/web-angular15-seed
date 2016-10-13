@@ -1,0 +1,25 @@
+<div layout="column" layout-align="center center" class="loginForm" ng-cloak>
+  <h1 style="font-size: 60px; color: white;">Angular Seed</h1>
+  <md-content>
+    <form name="loginForm" ng-submit="vm.login(loginForm.$valid)" novalidate class="box">
+      <md-input-container class="md-block">
+        <label>{{'USER.IDENTIFIER' | translate}}</label>
+        <input type="text" ng-model="vm.username"><span class="highlight"></span><span class="bar"></span>
+      </md-input-container>
+      <md-input-container class="md-block">
+        <label>{{'USER.PASSWORD' | translate}}</label>
+        <input type="password" ng-model="vm.password"><span class="highlight"></span><span class="bar"></span>
+      </md-input-container>
+      <section layout="row" layout-align="center center" layout-padding>
+        <md-button ng-hide="vm.processing" flex="100" type="submit" class="md-raised md-primary">Entrar</md-button>
+        <md-progress-circular ng-hide="!vm.processing" md-mode="indeterminate"></md-progress-circular>
+      </section>
+      <section ng-show="vm.error" layout="row" layout-align="center center" layout-padding class="red">
+        {{vm.error}}
+      </section>
+    </form>
+  </md-content>
+</div>
+<div layout="column" layout-align="center center">
+  <a href="https://angular.io/" target="_blank"><img src="app/img/logo.png"></a>
+</div>
