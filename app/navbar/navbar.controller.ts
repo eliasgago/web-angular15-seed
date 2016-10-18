@@ -2,26 +2,16 @@ import AuthService from 'app/auth/auth.service';
 
 class NavbarController {
 
-	static $inject = ['AuthService', '$mdSidenav'];
+	static $inject = ['AuthService'];
 
   	constructor(
-  		private AuthService: AuthService, 
-  		private $mdSidenav: ng.material.ISidenavService
+  		private AuthService: AuthService
   	) {}
 
-    static factory(AuthService, $mdSidenav){
-      return new NavbarController(AuthService, $mdSidenav);
+    static factory(AuthService){
+      return new NavbarController(AuthService);
     }
 
-    /*vm.logout = function() {
-      vm.Auth.logout();
-      $rootRouter.navigate(['/Login']);
-    }*/
-
-    openLeftMenu() {
-       this.$mdSidenav('left').toggle();
-    }
-    
 }
 
 export default NavbarController;

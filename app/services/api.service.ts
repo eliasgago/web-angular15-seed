@@ -15,10 +15,7 @@ class ApiService {
 
   private apiUrl = {
     user: this.appAuthUrl + '/users',
-    role: this.appAuthUrl + '/roles',
-    process: this.appDataUrl + '/domain/process',
-    status: this.appDataUrl + '/domain/status',
-    signatureType: this.appDataUrl + '/domain/signatureTypes'
+    role: this.appAuthUrl + '/roles'
   }
 
   getItems(itemType, queryParams, filterParams = null) {

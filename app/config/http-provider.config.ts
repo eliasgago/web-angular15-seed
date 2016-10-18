@@ -15,9 +15,6 @@ class HTTPProviderConfig {
                     if ($cookies.get('app_token')){
                         request.headers['Authorization'] =  'Bearer ' + $cookies.get('app_token');
                     }
-                    if(request.url.indexOf('mobbscan-2') != -1){
-                        request.headers['Authorization'] =  'Basic dGVjbm9jb206OVpTNTJEUUE=';
-                    }
                     return request;
                 },
                 responseError: function(rejection) {

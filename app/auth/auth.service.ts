@@ -31,8 +31,6 @@ class AuthService {
 	    };
 	    username = data.username;
 
-	    var encoded = btoa("hum4n012345");
-
 	    var req = {
 	        method: 'POST',
 	        url: this.appAuthUrl + '/oauth/token',
@@ -70,13 +68,11 @@ class AuthService {
 
 	    var data = {
 	    	refresh_token: refresh_token,
-	    	client_id: "human",
-	    	client_secret: "hum4n012345",
-	    	grant_type: "refresh_token",
-	    	scope: "read write"
+	    	client_id: this.appAuthData.client_id,
+	    	client_secret: this.appAuthData.client_secret,
+	    	grant_type: this.appAuthData.grant_type,
+	    	scope: this.appAuthData.scope
 	    };
-
-	    var encoded = btoa("hum4n012345");
 
 	    var req = {
 	        method: 'POST',

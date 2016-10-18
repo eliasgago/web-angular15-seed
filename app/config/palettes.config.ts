@@ -1,3 +1,5 @@
+// Palette from https://angular-md-color.com/
+
 class PalettesConfig {
 
 	static $inject = ['$mdThemingProvider'];
